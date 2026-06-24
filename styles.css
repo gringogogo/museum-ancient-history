@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #2f2925;
+    background: #f6f1e8;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 0 auto;
+}
+
+.header {
+    background: #5b3a29;
+    color: white;
+    padding: 18px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: #d9c2a3;
+}
+
+.hero-label {
+    margin: 0 0 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    margin: 0 0 16px;
+    font-size: clamp(36px, 7vw, 64px);
+}
+
+.hero p:not(.hero-label) {
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #5b3a29;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 34px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 24px;
+    background: white;
+    border: 1px solid #ded3c5;
+    border-radius: 8px;
+}
+
+.card-icon {
+    font-size: 48px;
+}
+
+.card h3 {
+    margin: 12px 0 8px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.section-light {
+    background: #eee3d3;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about h2 {
+    text-align: left;
+}
+
+.model-box {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 24px;
+    border: 2px dashed #8b6a55;
+    border-radius: 8px;
+}
+
+.footer {
+    padding: 22px 0;
+    text-align: center;
+    color: white;
+    background: #30231c;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .cards,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2 {
+        text-align: center;
+    }
+}
